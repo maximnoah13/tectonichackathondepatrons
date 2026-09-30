@@ -1,0 +1,2 @@
+# Optioneel: alleen nodig voor Claude (antwoordformulering, extractie bij upload, LLM-judge)
+anthropic

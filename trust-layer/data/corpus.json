@@ -1,0 +1,927 @@
+{
+ "_note": "Fictieve demo-dataset, afgeleid van hackathon/data/documents.js. Claims worden NIET hier opgeslagen: de Specialist Agent extraheert ze bij het opstarten uit de tekst.",
+ "companies": [
+  {
+   "id": "brouwer",
+   "name": "Brouwer Logistics NV",
+   "home_country": "BE"
+  },
+  {
+   "id": "verhoeven",
+   "name": "Verhoeven Retail NV",
+   "home_country": "BE"
+  }
+ ],
+ "topics": [
+  {
+   "id": "payroll.cutoff_day",
+   "label": "Payroll data cut-off",
+   "unit": "day of month",
+   "keywords": [
+    "cut-off",
+    "cutoff",
+    "cut off",
+    "loongegevens",
+    "prestaties doorgeven",
+    "deadline"
+   ],
+   "category": "Payroll processing"
+  },
+  {
+   "id": "year_end_bonus.payment",
+   "label": "Year-end bonus payment",
+   "unit": "timing",
+   "keywords": [
+    "eindejaarspremie",
+    "dertiende maand",
+    "13de maand"
+   ],
+   "category": "Compensation & benefits"
+  },
+  {
+   "id": "homework_allowance.amount",
+   "label": "Home-office allowance",
+   "unit": "EUR per month",
+   "keywords": [
+    "thuiswerkvergoeding",
+    "telewerkvergoeding",
+    "bureaukosten",
+    "onkostenvergoeding thuiswerk"
+   ],
+   "category": "Compensation & benefits"
+  },
+  {
+   "id": "meal_voucher.amount",
+   "label": "Meal voucher",
+   "unit": "EUR per day",
+   "keywords": [
+    "maaltijdcheque",
+    "maaltijdcheques",
+    "maaltijdvergoeding",
+    "meal"
+   ],
+   "category": "Compensation & benefits"
+  },
+  {
+   "id": "overtime.surcharge",
+   "label": "Overtime surcharge (weekday)",
+   "unit": "%",
+   "keywords": [
+    "overuren",
+    "overwerk",
+    "overurentoeslag",
+    "overtime"
+   ],
+   "category": "Working time"
+  },
+  {
+   "id": "remote_work.days",
+   "label": "Remote work days per week",
+   "unit": "days per week",
+   "keywords": [
+    "thuiswerkdagen",
+    "thuiswerken",
+    "telewerkdagen",
+    "remote",
+    "thuis werken"
+   ],
+   "category": "Working time"
+  }
+ ],
+ "documents": [
+  {
+   "id": "b-contract-v1",
+   "company_id": "brouwer",
+   "title": "Payrollovereenkomst Brouwer Logistics",
+   "source_type": "contract",
+   "chain_id": "brouwer-contract",
+   "version": "v1",
+   "published": "2021-03-15",
+   "valid_from": "2021-04-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Jan Peeters",
+    "active": false
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2021-03-20"
+   },
+   "text": "SD Worx verzorgt de volledige loonverwerking voor Brouwer Logistics NV. De klant bezorgt alle variabele loongegevens uiterlijk op de 20e van de maand. De eindejaarspremie wordt volledig uitbetaald in december."
+  },
+  {
+   "id": "b-contract-v2",
+   "company_id": "brouwer",
+   "title": "Payrollovereenkomst Brouwer Logistics",
+   "source_type": "contract",
+   "chain_id": "brouwer-contract",
+   "version": "v2",
+   "published": "2023-06-01",
+   "valid_from": "2023-07-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Jan Peeters",
+    "active": false
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2023-06-05"
+   },
+   "text": "Uitbreiding naar vestiging Luik. De klant bezorgt alle variabele loongegevens uiterlijk op de 20e van de maand. De eindejaarspremie wordt volledig uitbetaald in december, pro rata de gewerkte maanden."
+  },
+  {
+   "id": "b-contract-v3",
+   "company_id": "brouwer",
+   "title": "Payrollovereenkomst Brouwer Logistics",
+   "source_type": "contract",
+   "chain_id": "brouwer-contract",
+   "version": "v3",
+   "published": "2026-02-10",
+   "valid_from": "2026-03-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Sofie Maes",
+    "active": true
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2026-02-12"
+   },
+   "text": "Loonverwerking voor 560 werknemers in Antwerpen, Gent en Luik. De klant bezorgt alle variabele loongegevens uiterlijk op de 15e van de maand. De eindejaarspremie wordt in twee schijven betaald: 50% in juni en 50% in december."
+  },
+  {
+   "id": "b-handleiding",
+   "company_id": "brouwer",
+   "title": "Handleiding loonverwerking: cut-off data",
+   "source_type": "handbook",
+   "chain_id": null,
+   "version": "v1",
+   "published": "2022-01-12",
+   "valid_from": "2022-01-12",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Controleer of alle prestaties zijn ingevoerd: de cut-off voor loongegevens is de 20e van de maand. Start de proefberekening op de 21e."
+  },
+  {
+   "id": "b-mail-eindejaar",
+   "company_id": "brouwer",
+   "title": "Mailthread: afspraak eindejaarspremie 2024",
+   "source_type": "mail",
+   "chain_id": null,
+   "version": "-",
+   "published": "2024-12-02",
+   "valid_from": "2024-12-02",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Kunnen jullie bevestigen dat de eindejaarspremie opnieuw volledig in december komt? Bevestigd, zoals vorig jaar: de eindejaarspremie wordt volledig uitbetaald in december."
+  },
+  {
+   "id": "b-thuiswerk-v1",
+   "company_id": "brouwer",
+   "title": "Thuiswerkvergoeding Brouwer Logistics",
+   "source_type": "policy",
+   "chain_id": "brouwer-thuiswerk",
+   "version": "v1",
+   "published": "2023-01-09",
+   "valid_from": "2023-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Jan Peeters",
+    "active": false
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2023-01-10"
+   },
+   "text": "De thuiswerkvergoeding bedraagt 140 euro per maand, vrij van RSZ en bedrijfsvoorheffing. Voorwaarde is een telewerkovereenkomst."
+  },
+  {
+   "id": "b-thuiswerk-v2",
+   "company_id": "brouwer",
+   "title": "Thuiswerkvergoeding Brouwer Logistics",
+   "source_type": "policy",
+   "chain_id": "brouwer-thuiswerk",
+   "version": "v2",
+   "published": "2026-05-20",
+   "valid_from": "2026-04-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Ahmed El Idrissi",
+    "active": true
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2026-05-22"
+   },
+   "text": "De thuiswerkvergoeding bedraagt 157,83 euro per maand, geïndexeerd per 1 april 2026. Voorwaarde is een telewerkovereenkomst."
+  },
+  {
+   "id": "b-maaltijd-2026",
+   "company_id": "brouwer",
+   "title": "Beleid maaltijdcheques 2026",
+   "source_type": "policy",
+   "chain_id": "brouwer-maaltijd",
+   "version": "2026",
+   "published": "2025-11-20",
+   "valid_from": "2026-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Ahmed El Idrissi",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Brouwer",
+    "date": "2025-11-25"
+   },
+   "text": "De maaltijdcheque bedraagt 7 euro per gewerkte dag. De werknemersbijdrage is 1,09 euro."
+  },
+  {
+   "id": "b-maaltijd-2027",
+   "company_id": "brouwer",
+   "title": "Beleid maaltijdcheques 2027",
+   "source_type": "policy",
+   "chain_id": "brouwer-maaltijd",
+   "version": "2027",
+   "published": "2026-09-15",
+   "valid_from": "2027-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Ahmed El Idrissi",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Brouwer",
+    "date": "2026-09-18"
+   },
+   "text": "Vanaf 1 januari 2027 bedraagt de maaltijdcheque 8 euro per gewerkte dag. De werknemersbijdrage blijft 1,09 euro."
+  },
+  {
+   "id": "b-handboek-2025",
+   "company_id": "brouwer",
+   "title": "Personeelshandboek 2025",
+   "source_type": "handbook",
+   "chain_id": null,
+   "version": "2025",
+   "published": "2025-02-01",
+   "valid_from": "2025-02-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "HR Brouwer",
+    "active": true
+   },
+   "validated": null,
+   "text": "Welkom bij Brouwer Logistics. Elke gewerkte dag ontvang je een maaltijdcheque van 6 euro."
+  },
+  {
+   "id": "b-overuren-be",
+   "company_id": "brouwer",
+   "title": "Overurenbeleid Brouwer Logistics (BE)",
+   "source_type": "policy",
+   "chain_id": "brouwer-overuren-be",
+   "version": "v1",
+   "published": "2025-11-03",
+   "valid_from": "2025-11-03",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Sofie Maes",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Brouwer",
+    "date": "2025-11-05"
+   },
+   "text": "Overuren op weekdagen en zaterdag krijgen 50% toeslag. Zon- en feestdagen krijgen een hogere toeslag volgens het arbeidsreglement."
+  },
+  {
+   "id": "b-overuren-nl",
+   "company_id": "brouwer",
+   "title": "Overurenbeleid Brouwer Logistics (NL, Venlo)",
+   "source_type": "policy",
+   "chain_id": "brouwer-overuren-nl",
+   "version": "v1",
+   "published": "2025-09-18",
+   "valid_from": "2025-09-18",
+   "status": "published",
+   "country": "NL",
+   "owner": {
+    "name": "Daan de Vries",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Brouwer NL",
+    "date": "2025-09-20"
+   },
+   "text": "Overuren tussen 40 en 45 uur krijgen 30% toeslag, volgens de CAO Beroepsgoederenvervoer. Tijd voor tijd kan alleen na schriftelijk akkoord."
+  },
+  {
+   "id": "b-telewerk-2024",
+   "company_id": "brouwer",
+   "title": "Telewerkbeleid 2024",
+   "source_type": "policy",
+   "chain_id": "brouwer-telewerk",
+   "version": "2024",
+   "published": "2023-12-01",
+   "valid_from": "2024-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Jan Peeters",
+    "active": false
+   },
+   "validated": {
+    "by": "HR Brouwer",
+    "date": "2023-12-05"
+   },
+   "text": "Bedienden mogen maximaal 3 dagen per week thuiswerken, in overleg met de leidinggevende."
+  },
+  {
+   "id": "b-telewerk-2026",
+   "company_id": "brouwer",
+   "title": "Telewerkbeleid 2026",
+   "source_type": "policy",
+   "chain_id": "brouwer-telewerk",
+   "version": "2026",
+   "published": "2025-12-10",
+   "valid_from": "2026-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Sofie Maes",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Brouwer",
+    "date": "2025-12-12"
+   },
+   "text": "Bedienden mogen maximaal 2 dagen per week thuiswerken. Dinsdag en donderdag zijn teamdagen op kantoor."
+  },
+  {
+   "id": "b-pc140",
+   "company_id": "brouwer",
+   "title": "Samenvatting PC 140 Transport en logistiek",
+   "source_type": "legal",
+   "chain_id": "pc140",
+   "version": "2026",
+   "published": "2026-01-15",
+   "valid_from": "2026-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Legal Team BE",
+    "active": true
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2026-01-15"
+   },
+   "text": "Lonen worden jaarlijks op 1 januari geïndexeerd. Overuren krijgen sectoraal minimaal 50% toeslag."
+  },
+  {
+   "id": "v-sla",
+   "company_id": "verhoeven",
+   "title": "Payroll-SLA Verhoeven Retail",
+   "source_type": "contract",
+   "chain_id": "verhoeven-sla",
+   "version": "v1",
+   "published": "2025-05-01",
+   "valid_from": "2025-06-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Nora Claes",
+    "active": true
+   },
+   "validated": {
+    "by": "Legal BE",
+    "date": "2025-05-03"
+   },
+   "text": "Verhoeven Retail bezorgt de variabele loongegevens uiterlijk op de 18e van de maand."
+  },
+  {
+   "id": "v-maaltijd",
+   "company_id": "verhoeven",
+   "title": "Maaltijdcheques Verhoeven Retail",
+   "source_type": "policy",
+   "chain_id": "verhoeven-maaltijd",
+   "version": "2026",
+   "published": "2025-12-01",
+   "valid_from": "2026-01-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Nora Claes",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Verhoeven",
+    "date": "2025-12-02"
+   },
+   "text": "De maaltijdcheque bedraagt 5,50 euro per gewerkte dag."
+  },
+  {
+   "id": "v-thuiswerk",
+   "company_id": "verhoeven",
+   "title": "Thuiswerkvergoeding Verhoeven Retail",
+   "source_type": "policy",
+   "chain_id": "verhoeven-thuiswerk",
+   "version": "v1",
+   "published": "2024-03-01",
+   "valid_from": "2024-03-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Nora Claes",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Verhoeven",
+    "date": "2024-03-02"
+   },
+   "text": "De thuiswerkvergoeding bedraagt 50 euro per maand voor winkelondersteunende functies."
+  },
+  {
+   "id": "v-telewerk",
+   "company_id": "verhoeven",
+   "title": "Telewerkbeleid Verhoeven Retail",
+   "source_type": "policy",
+   "chain_id": "verhoeven-telewerk",
+   "version": "2025",
+   "published": "2025-01-15",
+   "valid_from": "2025-02-01",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": {
+    "by": "HR Verhoeven",
+    "date": "2025-01-20"
+   },
+   "text": "Hoofdkantoormedewerkers mogen maximaal 1 dag per week thuiswerken."
+  },
+  {
+   "id": "v-eindejaar",
+   "company_id": "verhoeven",
+   "title": "Eindejaarspremie Verhoeven Retail",
+   "source_type": "policy",
+   "chain_id": "verhoeven-eindejaar",
+   "version": "v1",
+   "published": "2024-10-01",
+   "valid_from": "2024-10-01",
+   "status": "published",
+   "country": "BE",
+   "owner": {
+    "name": "Nora Claes",
+    "active": true
+   },
+   "validated": {
+    "by": "HR Verhoeven",
+    "date": "2024-10-02"
+   },
+   "text": "De eindejaarspremie wordt volledig uitbetaald in december, volgens PC 201."
+  },
+  {
+   "id": "t-b-cutoff",
+   "company_id": "brouwer",
+   "title": "Teams #payroll-brouwer",
+   "source_type": "teams",
+   "author": {
+    "name": "Sofie Maes",
+    "role": "payroll_consultant"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-03-04",
+   "valid_from": "2026-03-04",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Ter info: vanaf deze maand is de cut-off de 15e van de maand, niet meer de 20e."
+  },
+  {
+   "id": "t-b-lunch",
+   "company_id": "brouwer",
+   "title": "Teams #payroll-brouwer",
+   "source_type": "teams",
+   "author": {
+    "name": "Kevin Claes",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2025-06-11",
+   "valid_from": "2025-06-11",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Wie gaat er mee lunchen om 12u?"
+  },
+  {
+   "id": "t-b-maaltijdvraag",
+   "company_id": "brouwer",
+   "title": "Teams #hr-vragen",
+   "source_type": "teams",
+   "author": {
+    "name": "Kevin Claes",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-09-20",
+   "valid_from": "2026-09-20",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Klopt het dat de maaltijdcheque al 8 euro is?"
+  },
+  {
+   "id": "t-b-thuiswerk",
+   "company_id": "brouwer",
+   "title": "Teams #algemeen",
+   "source_type": "teams",
+   "author": {
+    "name": "Pieter Wouters",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-02-02",
+   "valid_from": "2026-02-02",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Bij ons mag je gewoon 3 dagen per week thuiswerken hoor."
+  },
+  {
+   "id": "t-b-eindejaarvraag",
+   "company_id": "brouwer",
+   "title": "Teams #hr-vragen",
+   "source_type": "teams",
+   "author": {
+    "name": "Pieter Wouters",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-05-12",
+   "valid_from": "2026-05-12",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Komt de eindejaarspremie nog altijd volledig in december?"
+  },
+  {
+   "id": "t-b-eindejaar",
+   "company_id": "brouwer",
+   "title": "Teams #payroll-brouwer",
+   "source_type": "teams",
+   "author": {
+    "name": "Lotte Janssens",
+    "role": "payroll_expert"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-06-30",
+   "valid_from": "2026-06-30",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "De eindejaarspremie wordt voortaan in twee schijven betaald: de eerste schijf zat bij het loon van juni."
+  },
+  {
+   "id": "t-v-maaltijd",
+   "company_id": "verhoeven",
+   "title": "Teams #winkels",
+   "source_type": "teams",
+   "author": {
+    "name": "Jonas Peeters",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-02-03",
+   "valid_from": "2026-02-03",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "De maaltijdcheque is 6 euro sinds januari."
+  },
+  {
+   "id": "t-v-vakantie",
+   "company_id": "verhoeven",
+   "title": "Teams #winkels",
+   "source_type": "teams",
+   "author": {
+    "name": "Jonas Peeters",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-07-01",
+   "valid_from": "2026-07-01",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Fijne vakantie allemaal!"
+  },
+  {
+   "id": "t-v-cutoff",
+   "company_id": "verhoeven",
+   "title": "Teams #payroll-verhoeven",
+   "source_type": "teams",
+   "author": {
+    "name": "Nora Claes",
+    "role": "payroll_consultant"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-01-10",
+   "valid_from": "2026-01-10",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Reminder: de cut-off blijft de 18e van de maand."
+  },
+  {
+   "id": "t-v-parking",
+   "company_id": "verhoeven",
+   "title": "Teams #algemeen",
+   "source_type": "teams",
+   "author": {
+    "name": "Jonas Peeters",
+    "role": "employee"
+   },
+   "chain_id": null,
+   "version": "-",
+   "published": "2026-04-14",
+   "valid_from": "2026-04-14",
+   "status": "published",
+   "country": "BE",
+   "owner": null,
+   "validated": null,
+   "text": "Weet iemand of de parking morgen open is?"
+  },
+  {
+   "chain_id": null,
+   "version": "v1",
+   "status": "published",
+   "country": "BE",
+   "validated": {
+    "by": "HR",
+    "date": "2026-08-01"
+   },
+   "visibility": "restricted",
+   "id": "b-hr-salary",
+   "company_id": "brouwer",
+   "title": "Confidential: salary bands 2027",
+   "source_type": "policy",
+   "published": "2026-08-01",
+   "valid_from": "2027-01-01",
+   "owner": {
+    "name": "Sofie Maes",
+    "active": true
+   },
+   "text": "Vertrouwelijk. Loonschalen 2027 voor bedienden: schaal A tot E, gemiddelde verhoging 3,2%. Enkel voor HR en management."
+  },
+  {
+   "chain_id": null,
+   "version": "v1",
+   "status": "published",
+   "country": "BE",
+   "validated": {
+    "by": "HR",
+    "date": "2026-08-01"
+   },
+   "visibility": "restricted",
+   "id": "b-hr-overtime-audit",
+   "company_id": "brouwer",
+   "title": "Confidential: overtime audit Q3",
+   "source_type": "procedure",
+   "published": "2026-09-05",
+   "valid_from": "2026-09-05",
+   "owner": {
+    "name": "Sofie Maes",
+    "active": true
+   },
+   "text": "Interne audit Q3. Overuren op weekdagen krijgen 50% toeslag; de audit bevestigt correcte toepassing."
+  },
+  {
+   "chain_id": null,
+   "version": "v1",
+   "status": "published",
+   "country": "BE",
+   "validated": {
+    "by": "HR",
+    "date": "2026-08-01"
+   },
+   "visibility": "restricted",
+   "id": "v-hr-investigation",
+   "company_id": "verhoeven",
+   "title": "Confidential: remote work investigation",
+   "source_type": "procedure",
+   "published": "2026-06-10",
+   "valid_from": "2026-06-10",
+   "owner": {
+    "name": "Nora Claes",
+    "active": true
+   },
+   "text": "Vertrouwelijk onderzoek. Hoofdkantoormedewerkers mogen maximaal 1 dag per week thuiswerken; twee overtredingen vastgesteld."
+  }
+ ],
+ "seed_votes": [
+  {
+   "doc_id": "b-contract-v1",
+   "right": 142,
+   "left": {
+    "verouderd": 6,
+    "onduidelijk": 2,
+    "fout": 1
+   },
+   "hr_share": 0.2,
+   "as_of": "2025-12-01"
+  },
+  {
+   "doc_id": "b-contract-v2",
+   "right": 61,
+   "left": {
+    "verouderd": 5,
+    "onduidelijk": 1,
+    "fout": 1
+   },
+   "hr_share": 0.2,
+   "as_of": "2026-02-01"
+  },
+  {
+   "doc_id": "b-contract-v3",
+   "right": 4,
+   "left": {},
+   "hr_share": 0.5,
+   "as_of": "2026-09-01"
+  },
+  {
+   "doc_id": "b-handleiding",
+   "right": 88,
+   "left": {
+    "verouderd": 5,
+    "onduidelijk": 1
+   },
+   "hr_share": 0.1,
+   "as_of": "2026-06-01"
+  },
+  {
+   "doc_id": "b-mail-eindejaar",
+   "right": 18,
+   "left": {
+    "verouderd": 4,
+    "fout": 1
+   },
+   "hr_share": 0.1,
+   "as_of": "2026-03-01"
+  },
+  {
+   "doc_id": "b-thuiswerk-v1",
+   "right": 47,
+   "left": {
+    "verouderd": 3
+   },
+   "hr_share": 0.2,
+   "as_of": "2026-03-01"
+  },
+  {
+   "doc_id": "b-thuiswerk-v2",
+   "right": 9,
+   "left": {
+    "onduidelijk": 1
+   },
+   "hr_share": 0.4,
+   "as_of": "2026-09-01"
+  },
+  {
+   "doc_id": "b-maaltijd-2026",
+   "right": 20,
+   "left": {
+    "onduidelijk": 2
+   },
+   "hr_share": 0.3,
+   "as_of": "2026-08-01"
+  },
+  {
+   "doc_id": "b-maaltijd-2027",
+   "right": 3,
+   "left": {},
+   "hr_share": 0.6,
+   "as_of": "2026-09-25"
+  },
+  {
+   "doc_id": "b-handboek-2025",
+   "right": 15,
+   "left": {
+    "verouderd": 5,
+    "fout": 1
+   },
+   "hr_share": 0.1,
+   "as_of": "2026-05-01"
+  },
+  {
+   "doc_id": "b-overuren-be",
+   "right": 23,
+   "left": {
+    "onduidelijk": 2
+   },
+   "hr_share": 0.3,
+   "as_of": "2026-06-01"
+  },
+  {
+   "doc_id": "b-overuren-nl",
+   "right": 31,
+   "left": {
+    "onduidelijk": 9,
+    "fout": 3
+   },
+   "hr_share": 0.2,
+   "as_of": "2026-06-01"
+  },
+  {
+   "doc_id": "b-telewerk-2024",
+   "right": 96,
+   "left": {
+    "verouderd": 4
+   },
+   "hr_share": 0.15,
+   "as_of": "2026-01-15"
+  },
+  {
+   "doc_id": "b-telewerk-2026",
+   "right": 6,
+   "left": {
+    "onduidelijk": 7,
+    "fout": 2
+   },
+   "hr_share": 0.3,
+   "as_of": "2026-09-10"
+  },
+  {
+   "doc_id": "b-pc140",
+   "right": 52,
+   "left": {
+    "onduidelijk": 4
+   },
+   "hr_share": 0.4,
+   "as_of": "2026-07-01"
+  },
+  {
+   "doc_id": "t-b-thuiswerk",
+   "right": 34,
+   "left": {
+    "fout": 3
+   },
+   "hr_share": 0.0,
+   "as_of": "2026-03-01"
+  },
+  {
+   "doc_id": "v-maaltijd",
+   "right": 12,
+   "left": {},
+   "hr_share": 0.3,
+   "as_of": "2026-06-01"
+  },
+  {
+   "doc_id": "v-telewerk",
+   "right": 8,
+   "left": {
+    "onduidelijk": 1
+   },
+   "hr_share": 0.2,
+   "as_of": "2026-05-01"
+  },
+  {
+   "doc_id": "t-v-maaltijd",
+   "right": 5,
+   "left": {
+    "fout": 2
+   },
+   "hr_share": 0.0,
+   "as_of": "2026-03-01"
+  }
+ ]
+}

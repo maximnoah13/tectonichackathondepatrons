@@ -1,0 +1,6 @@
+# runtime data: accounts (password hashes), sessions, votes, uploads, audit log
+trust-layer/data/state/
+__pycache__/
+*.pyc
+.env
+.claude/
